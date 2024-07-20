@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b245io2qa3hf4"
-path="res://.godot/imported/sokoban-block.png-3551aabc387c2be692f9c185b90c3c6c.ctex"
+uid="uid://drpdh6y4x5sjk"
+path="res://.godot/imported/sokoban-goal.png-ca68166c8219444fb725febb2bc33d97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_assets/sokoban-block.png"
-dest_files=["res://.godot/imported/sokoban-block.png-3551aabc387c2be692f9c185b90c3c6c.ctex"]
+source_file="res://assets/sokoban-goal.png"
+dest_files=["res://.godot/imported/sokoban-goal.png-ca68166c8219444fb725febb2bc33d97.ctex"]
 
 [params]
 

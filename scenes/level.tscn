@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://baerpt4cfluqy"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_lkg2y"]
-[ext_resource type="PackedScene" uid="uid://s50c4lu6llqr" path="res://block.tscn" id="3_6r3wd"]
-[ext_resource type="PackedScene" uid="uid://bego0bie80saf" path="res://cell_scenes/player.tscn" id="3_yt5nr"]
-[ext_resource type="Texture2D" uid="uid://br8pmil68y088" path="res://old_assets/sokoban-tileset.png" id="7_kqe5q"]
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_lkg2y"]
+[ext_resource type="PackedScene" uid="uid://s50c4lu6llqr" path="res://scenes/block.tscn" id="3_6r3wd"]
+[ext_resource type="PackedScene" uid="uid://bego0bie80saf" path="res://scenes/player.tscn" id="3_yt5nr"]
+[ext_resource type="Texture2D" uid="uid://br8pmil68y088" path="res://assets/sokoban-tileset.png" id="7_kqe5q"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sshdu"]
 

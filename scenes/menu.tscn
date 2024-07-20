@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxl31d5rk3kfv"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_igm81"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_igm81"]
 
 [sub_resource type="GDScript" id="GDScript_ugcop"]
 script/source = "extends Button
