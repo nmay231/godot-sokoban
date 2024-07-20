@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://s50c4lu6llqr"]
+
+[ext_resource type="Script" path="res://block.gd" id="1_5uhoi"]
+[ext_resource type="Texture2D" uid="uid://b245io2qa3hf4" path="res://old_assets/sokoban-block.png" id="1_q7hhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0v0o"]
+size = Vector2(14, 14)
+
+[node name="Block" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 14
+gravity_scale = 0.0
+script = ExtResource("1_5uhoi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q7hhy")
+centered = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_b0v0o")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)
+collision_mask = 6

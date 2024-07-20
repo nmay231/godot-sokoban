@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy4x6y5cn5ngb"
-path="res://.godot/imported/roguelikeSheet_transparent.png-e1e28938506522c83e98b4a3a1441ae2.ctex"
+uid="uid://1av5nm4rwxws"
+path="res://.godot/imported/sokoban-tileset.png-51176a49dc948d32f666b53c43aee3e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://old_assets/roguelikeSheet_transparent.png"
-dest_files=["res://.godot/imported/roguelikeSheet_transparent.png-e1e28938506522c83e98b4a3a1441ae2.ctex"]
+source_file="res://sokoban-tileset.png"
+dest_files=["res://.godot/imported/sokoban-tileset.png-51176a49dc948d32f666b53c43aee3e3.ctex"]
 
 [params]
 
