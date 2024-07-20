@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvo3ssyauou27"]
+
+[ext_resource type="Texture2D" uid="uid://cegjuu3d0nwuv" path="res://old_assets/sokoban-empty.png" id="1_dnkbn"]
+
+[node name="empty_inside" type="Sprite2D"]
+texture = ExtResource("1_dnkbn")
+centered = false

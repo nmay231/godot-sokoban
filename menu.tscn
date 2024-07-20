@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxl31d5rk3kfv"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_igm81"]
+
+[sub_resource type="GDScript" id="GDScript_ugcop"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pressed.connect(self._button_pressed)
+
+
+func _button_pressed():
+	print(\"testing\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_igm81")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 33.0
+bbcode_enabled = true
+text = "[center]Sokoban[/center]"
+autowrap_mode = 0
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = 44.0
+offset_right = 39.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "START"
+script = SubResource("GDScript_ugcop")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3yucbwor0lwv"]
+
+[ext_resource type="Texture2D" uid="uid://67kooybgdvyg" path="res://old_assets/sokoban-wall.png" id="1_f7nny"]
+
+[node name="Wall" type="Sprite2D"]
+texture = ExtResource("1_f7nny")
+centered = false

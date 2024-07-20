@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://baerpt4cfluqy"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_lkg2y"]
+[ext_resource type="PackedScene" uid="uid://cvo3ssyauou27" path="res://cell_scenes/empty_inside.tscn" id="2_n2j2m"]
+[ext_resource type="PackedScene" uid="uid://3n1cfof1ntbs" path="res://cell_scenes/player.tscn" id="3_yt5nr"]
+[ext_resource type="PackedScene" uid="uid://d3yucbwor0lwv" path="res://cell_scenes/wall.tscn" id="4_buatb"]
+[ext_resource type="PackedScene" uid="uid://bm8p4xistgdc8" path="res://cell_scenes/goal.tscn" id="5_yo1r4"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7okhw"]
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_lkg2y")
+wall_scene = ExtResource("4_buatb")
+
+[node name="empty_inside" parent="." instance=ExtResource("2_n2j2m")]
+position = Vector2(32, 16)
+
+[node name="empty_inside2" parent="." instance=ExtResource("2_n2j2m")]
+position = Vector2(48, 16)
+
+[node name="Player" parent="." instance=ExtResource("3_yt5nr")]
+z_index = 1
+position = Vector2(16, 16)
+
+[node name="Wall" parent="." instance=ExtResource("4_buatb")]
+position = Vector2(32, 48)
+
+[node name="goal" parent="." instance=ExtResource("5_yo1r4")]
+position = Vector2(80, 32)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_7okhw")
