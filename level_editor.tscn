@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bsbkrk3j703g2"]
+
+[node name="level_editor" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_left = 112.0
+offset_right = 160.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 3
+
+[node name="1" type="GridContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TabContainer/1"]
+layout_mode = 2

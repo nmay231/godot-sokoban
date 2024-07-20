@@ -1,7 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3yucbwor0lwv"]
+[gd_scene load_steps=3 format=3 uid="uid://26nu85iv8sp4"]
 
-[ext_resource type="Texture2D" uid="uid://67kooybgdvyg" path="res://old_assets/sokoban-wall.png" id="1_f7nny"]
+[ext_resource type="Texture2D" uid="uid://67kooybgdvyg" path="res://old_assets/sokoban-wall.png" id="1_gm2ds"]
 
-[node name="Wall" type="Sprite2D"]
-texture = ExtResource("1_f7nny")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0v0o"]
+size = Vector2(14, 14)
+
+[node name="RigidBody2D2" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gm2ds")
 centered = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_b0v0o")
