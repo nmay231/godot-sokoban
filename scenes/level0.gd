@@ -18,9 +18,17 @@ var grid = [
 ]
 var PlayerPos = Vector2(3, 1)
 var Blocks = [Vector2(3, 3)]
+@onready var tile_map = $TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(tile_map)
+	print(tile_map.tile_set)
+	var t: TileSet = tile_map.tile_set
+	#t.layer
+	print(tile_map.get_layers_count())
+	print(tile_map.get_layer_name(0))
+	print(tile_map.tile_set)
 	#var rect = get_viewport_rect()
 	#var viewport = get_viewport()
 	print(get_viewport_rect(), " ", get_viewport_transform(), " ", get_viewport())
