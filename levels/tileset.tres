@@ -1,0 +1,33 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://ba2w4v7jfms31"]
+
+[ext_resource type="Texture2D" uid="uid://br8pmil68y088" path="res://assets/sokoban-tileset.png" id="1_p7svg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ivo14"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22djr"]
+texture = ExtResource("1_p7svg")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_ivo14")
+sources/1 = SubResource("TileSetAtlasSource_22djr")

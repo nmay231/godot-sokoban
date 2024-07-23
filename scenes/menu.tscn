@@ -1,47 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxl31d5rk3kfv"]
+[gd_scene load_steps=10 format=3 uid="uid://cxl31d5rk3kfv"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_igm81"]
-
-[sub_resource type="GDScript" id="GDScript_ugcop"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pressed.connect(self._button_pressed)
-
-
-func _button_pressed():
-	print(\"testing\")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="PackedScene" uid="uid://cghaw7txpym88" path="res://levels/Level1.tscn" id="2_q0x8g"]
+[ext_resource type="PackedScene" uid="uid://d4dw142xnw7st" path="res://levels/Level2.tscn" id="3_q772p"]
+[ext_resource type="PackedScene" uid="uid://dl8eb2iyg3ali" path="res://levels/Level3.tscn" id="4_8ohry"]
+[ext_resource type="PackedScene" uid="uid://ccoysml6d8sp4" path="res://levels/Level4.tscn" id="5_v7voj"]
+[ext_resource type="PackedScene" uid="uid://d1qygskmuysoa" path="res://levels/Level5.tscn" id="6_q6c5a"]
+[ext_resource type="PackedScene" uid="uid://bw17hk8qxilq8" path="res://levels/Level6.tscn" id="7_qpc3p"]
+[ext_resource type="PackedScene" uid="uid://bkht6q0nooadu" path="res://levels/Level7.tscn" id="8_52xdf"]
+[ext_resource type="PackedScene" uid="uid://bb81vq2hcilom" path="res://levels/Level8.tscn" id="9_2ptiq"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_igm81")
+levels = Array[PackedScene]([ExtResource("2_q0x8g"), ExtResource("3_q772p"), ExtResource("4_8ohry"), ExtResource("5_v7voj"), ExtResource("6_q6c5a"), ExtResource("7_qpc3p"), ExtResource("8_52xdf"), ExtResource("9_2ptiq")])
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_top = 14.0
-offset_right = 160.0
-offset_bottom = 33.0
-bbcode_enabled = true
-text = "[center]Sokoban[/center]"
-autowrap_mode = 0
-
-[node name="StartButton" type="Button" parent="."]
-anchors_preset = 13
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -39.0
-offset_top = 44.0
-offset_right = 39.0
-offset_bottom = -22.0
+offset_left = -431.0
+offset_top = 100.0
+offset_right = 431.0
+offset_bottom = 230.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 130
+text = "Sokoban"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 46.0
+offset_right = 224.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "START"
-script = SubResource("GDScript_ugcop")
+theme_override_constants/separation = 50
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "START"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

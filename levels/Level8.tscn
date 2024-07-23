@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb81vq2hcilom"]
+
+[ext_resource type="TileSet" uid="uid://ba2w4v7jfms31" path="res://levels/tileset.tres" id="1_hch1x"]
+[ext_resource type="Script" path="res://levels/Level8.gd" id="1_p4m4e"]
+[ext_resource type="PackedScene" uid="uid://bego0bie80saf" path="res://scenes/player.tscn" id="2_lgakh"]
+[ext_resource type="PackedScene" uid="uid://s50c4lu6llqr" path="res://scenes/block.tscn" id="3_o4ey1"]
+
+[node name="Level8" type="Node2D"]
+script = ExtResource("1_p4m4e")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 48)
+tile_set = ExtResource("1_hch1x")
+format = 2
+layer_0/name = "Layer0"
+layer_0/tile_data = PackedInt32Array(65537, 131073, 1, 65538, 131073, 1, 65539, 131073, 1, 65540, 131073, 1, 65541, 131073, 1, 65542, 131073, 1, 65543, 131073, 1, 131073, 131073, 1, 196609, 131073, 1, 262145, 131073, 1, 262146, 131073, 1, 262147, 131073, 1, 262148, 131073, 1, 262149, 131073, 1, 262150, 131073, 1, 327686, 131073, 1, 393222, 131073, 1, 131074, 131073, 0, 131075, 131073, 0, 131076, 131073, 0, 131077, 131073, 0, 131078, 131073, 0, 196614, 131073, 0, 196613, 131073, 0, 196612, 131073, 0, 196611, 131073, 0, 196610, 131073, 0, 196615, 131073, 0, 65544, 131073, 0, 131080, 131073, 0, 196616, 131073, 0, 196617, 65537, 0, 196618, 131073, 0, 131082, 131073, 0, 65546, 131073, 0, 10, 131073, 0, 9, 131073, 0, 65545, 131073, 0, 131081, 65537, 0, 262151, 131073, 0, 327687, 131073, 0, 327688, 131073, 0, 327689, 65537, 0, 262153, 65537, 0, 327690, 131073, 0, 327691, 131073, 0, 393227, 131073, 0, 393226, 131073, 0, 393225, 65537, 0, 393223, 131073, 1, 393224, 131073, 1, 458760, 131073, 1, 458761, 131073, 1, 458762, 131073, 1, 458763, 131073, 1, 458764, 131073, 1, 393228, 131073, 1, 327692, 131073, 1, 262156, 131073, 1, 262155, 131073, 1, 262154, 131073, 1, 262152, 131073, 1, 131079, 131073, 1, 7, 131073, 1, 8, 131073, 1, -65528, 131073, 1, -65527, 131073, 1, -65526, 131073, 1, -65525, 131073, 1, 11, 131073, 1, 65547, 131073, 1, 131083, 131073, 1, 196619, 131073, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_lgakh")]
+position = Vector2(144, 48)
+
+[node name="Block" parent="." instance=ExtResource("3_o4ey1")]
+position = Vector2(144, 112)
+
+[node name="Block2" parent="." instance=ExtResource("3_o4ey1")]
+position = Vector2(144, 64)
+
+[node name="Block3" parent="." instance=ExtResource("3_o4ey1")]
+position = Vector2(144, 128)
+
+[node name="Block4" parent="." instance=ExtResource("3_o4ey1")]
+position = Vector2(144, 96)
+
+[node name="Block5" parent="." instance=ExtResource("3_o4ey1")]
+position = Vector2(144, 80)
