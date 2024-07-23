@@ -1,7 +1,9 @@
 class_name LevelLoader
 extends Node2D
 
-@export var level: Level
+#@export var level: Level
+@export var level_index: int
+var level: Level
 var level_node: Node
 var tile_map: TileMap
 var blocks: Array[Node]
@@ -9,6 +11,7 @@ var goal_hash: Dictionary = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	level = Globals.levels[level_index]
 	level_node = level.scene.instantiate()
 	add_child(level_node)
 	get_window().content_scale_factor = 60.0 / level.size.x
@@ -35,3 +38,7 @@ func _unhandled_key_input(event):
 			print("Failed on", goal)
 			return
 	print("Success!")
+	var loader = LevelLoader.new()
+	loader.level_index = level_index + 1
+	add_sibling(loader)
+	get_parent().remove_child(self)
