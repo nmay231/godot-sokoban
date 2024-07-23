@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw17hk8qxilq8"]
+[gd_scene load_steps=4 format=3 uid="uid://bw17hk8qxilq8"]
 
-[ext_resource type="Script" path="res://levels/Level6.gd" id="1_ro6u7"]
 [ext_resource type="TileSet" uid="uid://ba2w4v7jfms31" path="res://levels/tileset.tres" id="1_wxqbi"]
 [ext_resource type="PackedScene" uid="uid://bego0bie80saf" path="res://scenes/player.tscn" id="2_m4lbt"]
 [ext_resource type="PackedScene" uid="uid://s50c4lu6llqr" path="res://scenes/block.tscn" id="3_gr6mj"]
 
 [node name="Level6" type="Node2D"]
-script = ExtResource("1_ro6u7")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_wxqbi")

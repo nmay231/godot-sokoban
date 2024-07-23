@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://bpubsmio2bry4"]
+
+[ext_resource type="PackedScene" uid="uid://cghaw7txpym88" path="res://levels/Level1.tscn" id="1_nf15w"]
+[ext_resource type="Script" path="res://scenes/Level.gd" id="2_egn1v"]
+
+[resource]
+script = ExtResource("2_egn1v")
+size = Vector2i(9, 9)
+scene = ExtResource("1_nf15w")
+goal_positions = Array[Vector2i]([Vector2i(4, 6)])

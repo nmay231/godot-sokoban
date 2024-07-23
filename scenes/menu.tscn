@@ -1,18 +1,18 @@
 [gd_scene load_steps=10 format=3 uid="uid://cxl31d5rk3kfv"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_igm81"]
-[ext_resource type="PackedScene" uid="uid://cghaw7txpym88" path="res://levels/Level1.tscn" id="2_q0x8g"]
-[ext_resource type="PackedScene" uid="uid://d4dw142xnw7st" path="res://levels/Level2.tscn" id="3_q772p"]
-[ext_resource type="PackedScene" uid="uid://dl8eb2iyg3ali" path="res://levels/Level3.tscn" id="4_8ohry"]
-[ext_resource type="PackedScene" uid="uid://ccoysml6d8sp4" path="res://levels/Level4.tscn" id="5_v7voj"]
-[ext_resource type="PackedScene" uid="uid://d1qygskmuysoa" path="res://levels/Level5.tscn" id="6_q6c5a"]
-[ext_resource type="PackedScene" uid="uid://bw17hk8qxilq8" path="res://levels/Level6.tscn" id="7_qpc3p"]
-[ext_resource type="PackedScene" uid="uid://bkht6q0nooadu" path="res://levels/Level7.tscn" id="8_52xdf"]
-[ext_resource type="PackedScene" uid="uid://bb81vq2hcilom" path="res://levels/Level8.tscn" id="9_2ptiq"]
+[ext_resource type="Resource" uid="uid://bpubsmio2bry4" path="res://levels/Level1.tres" id="2_buugh"]
+[ext_resource type="Resource" uid="uid://o607bu88nv2s" path="res://levels/Level2.tres" id="3_sq2y8"]
+[ext_resource type="Resource" uid="uid://eafknwx8kr5a" path="res://levels/Level3.tres" id="4_00a8m"]
+[ext_resource type="Resource" uid="uid://l81xxybavj5y" path="res://levels/Level4.tres" id="5_dj44l"]
+[ext_resource type="Resource" uid="uid://dde5rqm5ig54j" path="res://levels/Level5.tres" id="6_pclf2"]
+[ext_resource type="Resource" uid="uid://drjvlvdcdjaes" path="res://levels/Level6.tres" id="7_c75vm"]
+[ext_resource type="Resource" uid="uid://4l2ulvfv55og" path="res://levels/Level7.tres" id="8_eglmb"]
+[ext_resource type="Resource" uid="uid://v7juj0jwpxom" path="res://levels/Level8.tres" id="9_qa7w1"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_igm81")
-levels = Array[PackedScene]([ExtResource("2_q0x8g"), ExtResource("3_q772p"), ExtResource("4_8ohry"), ExtResource("5_v7voj"), ExtResource("6_q6c5a"), ExtResource("7_qpc3p"), ExtResource("8_52xdf"), ExtResource("9_2ptiq")])
+levels = Array[Resource("res://scenes/Level.gd")]([ExtResource("2_buugh"), ExtResource("3_sq2y8"), ExtResource("4_00a8m"), ExtResource("5_dj44l"), ExtResource("6_pclf2"), ExtResource("7_c75vm"), ExtResource("8_eglmb"), ExtResource("9_qa7w1")])
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
