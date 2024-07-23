@@ -21,9 +21,10 @@ var Blocks = [Vector2(3, 3)]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#var wall = wall_scene.instantiate()
-	#add_child(wall)
-	pass
+	#var rect = get_viewport_rect()
+	#var viewport = get_viewport()
+	print(get_viewport_rect(), " ", get_viewport_transform(), " ", get_viewport())
+	#viewport.width
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

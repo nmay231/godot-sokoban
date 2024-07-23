@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://baerpt4cfluqy"]
+
+[ext_resource type="Script" path="res://scenes/level0.gd" id="1_xs23g"]
+[ext_resource type="PackedScene" uid="uid://bego0bie80saf" path="res://scenes/player.tscn" id="2_vvwch"]
+[ext_resource type="PackedScene" uid="uid://s50c4lu6llqr" path="res://scenes/block.tscn" id="3_cy1an"]
+[ext_resource type="Texture2D" uid="uid://br8pmil68y088" path="res://assets/sokoban-tileset.png" id="4_1okam"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sshdu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ubn0"]
+texture = ExtResource("4_1okam")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_qtlq1"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_sshdu")
+sources/0 = SubResource("TileSetAtlasSource_3ubn0")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_xs23g")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 960.0
+offset_bottom = 960.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+size = Vector2i(960, 960)
+size_2d_override = Vector2i(144, 144)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="Player" parent="." instance=ExtResource("2_vvwch")]
+position = Vector2(32, 64)
+
+[node name="Block" parent="." instance=ExtResource("3_cy1an")]
+position = Vector2(64, 64)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_qtlq1")
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 131072, 1, 65538, 131072, 1, 65539, 131072, 1, 65540, 131072, 1, 65541, 131072, 1, 65542, 131072, 1, 65543, 131072, 1, 458759, 131072, 1, 458758, 131072, 1, 458757, 131072, 1, 458756, 131072, 1, 458755, 131072, 1, 458754, 131072, 1, 458753, 131072, 1, 393217, 131072, 1, 327681, 131072, 1, 262145, 131072, 1, 196609, 131072, 1, 131073, 131072, 1, 131079, 131072, 1, 196615, 131072, 1, 262151, 131072, 1, 327687, 131072, 1, 393223, 131072, 1)
