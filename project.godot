@@ -20,12 +20,9 @@ Globals="*res://globals.gd"
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=90
-window/size/window_width_override=960
-window/size/window_height_override=540
+window/size/viewport_width=960
+window/size/viewport_height=960
 window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [gui]
 
@@ -43,4 +40,4 @@ theme/default_font_antialiasing=0
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.299547, 0.299547, 0.299547, 1)
