@@ -11,8 +11,7 @@ func _ready():
 
 func _on_start_button_pressed():
 	var loader = LevelLoader.new()
-	#loader.level = levels[1]
-	loader.level_index = 5
+	loader.level_index = 0
 	add_sibling(loader)
 	get_parent().remove_child(self)
 

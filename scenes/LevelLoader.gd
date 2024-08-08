@@ -35,9 +35,8 @@ func _unhandled_key_input(event):
 
 	for goal in level.goal_positions:
 		if !block_hash.has(goal):
-			print("Failed on", goal)
 			return
-	print("Success!")
+
 	var loader = LevelLoader.new()
 	loader.level_index = level_index + 1
 	add_sibling(loader)

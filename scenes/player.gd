@@ -25,6 +25,4 @@ func move(dir: String):
 			if not ray_cast_2d.is_colliding():
 				object.push(dir)
 				position += vector
-			else:
-				print(ray_cast_2d.get_collider())
 			ray_cast_2d.position = Vector2(1, 1) * (Globals.grid_scale / 2)
