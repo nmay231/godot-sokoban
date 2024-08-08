@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm8p4xistgdc8"]
-
-[ext_resource type="Texture2D" uid="uid://drpdh6y4x5sjk" path="res://assets/sokoban-goal.png" id="1_ffy8n"]
-
-[node name="goal" type="Sprite2D"]
-texture = ExtResource("1_ffy8n")
-centered = false
